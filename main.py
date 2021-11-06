@@ -10,6 +10,7 @@ from forms import CreatePostForm, RegistrationForm, LoginForm, CommentForm
 from flask_gravatar import Gravatar
 from decouple import config
 from functools import wraps
+from datetime import datetime
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
@@ -90,10 +91,14 @@ def admin_only(func):
 @app.route('/')
 def get_all_posts():
     posts = BlogPost.query.all()
+    date = datetime.today()
+    #get current year 
+    year = date.year
+
     if posts:
-        return render_template('index.html', all_posts=posts)
+        return render_template('index.html', all_posts=posts, date=year)
     else:
-        return render_template('index.html')
+        return render_template('index.html', date=year)
 
 
 @app.route('/register', methods=['GET', 'POST'])
