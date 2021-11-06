@@ -11,6 +11,7 @@ from flask_gravatar import Gravatar
 from decouple import config
 from functools import wraps
 from datetime import datetime
+import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
@@ -232,6 +233,6 @@ def delete_post(post_id):
     db.session.commit()
     return redirect(url_for('get_all_posts'))
 
-
+port = int(os.environ.get("PORT", 5000))
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=port, debug=True)
