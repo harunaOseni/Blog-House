@@ -8,7 +8,6 @@ from sqlalchemy.orm import relationship
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 from forms import CreatePostForm, RegistrationForm, LoginForm, CommentForm
 from flask_gravatar import Gravatar
-from decouple import config
 from functools import wraps
 from datetime import datetime
 import os
@@ -22,7 +21,7 @@ Bootstrap(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
-app.secret_key = config('SECRET_KEY')
+app.secret_key = 'Best77077#'
 login_manager = LoginManager()
 login_manager.init_app(app)
 gravatar = Gravatar(app, size=100, rating='g', default='retro',
