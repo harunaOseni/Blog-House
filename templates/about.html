@@ -1,31 +1,47 @@
 {% include "header.html" %}
 
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url({{ url_for('static', filename='img/about-bg.jpg')}})">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>About Me</h1>
-            <span class="subheading">This is what I do.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main Content -->
+<!-- Page Header -->
+<header
+  class="masthead"
+  style="background-image: url({{ url_for('static', filename='img/about-bg.jpg')}})"
+>
+  <div class="overlay"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <p>Hey there, My name is Haruna Oseni, a software engineer who really enjoys solving hard engineering problems, learning intriguing technologies and building out my ideas.</p>
-        <p>I am from Nigeria, currently in the united states pursuing some crazy dream which I believe will have some merit in the coming years.</p>
-        <p>I am pretty fun, wild and I work very hard at what I love, which is engineering, I might write more "about me" stuff here later on , but right now I'll leave with a quote from my biggest inspiration Elon Musk which I believe defines the pursuit of my dreams "My mentality is that of a Samurai I rather commit seppeku than fail".</p>
+        <div class="page-heading">
+          <h1>About Me</h1>
+          <span class="subheading">This is what I do.</span>
+        </div>
       </div>
     </div>
   </div>
+</header>
 
-  <hr>
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <p>
+        Hey there, My name is Haruna Oseni, a software engineer who really
+        enjoys solving hard engineering problems, learning intriguing
+        technologies and building out my ideas.
+      </p>
+      <p>
+        I am from Nigeria, currently in the united states pursuing some crazy
+        dream which I believe will have some merit in the coming years.
+      </p>
+      <p>
+        I am pretty fun, wild and I work very hard at what I love, which is
+        engineering, I might write more "about me" stuff here later on , but
+        right now I'll leave with a quote from my biggest inspiration Elon Musk
+        which I believe defines the pursuit of my dreams "My mentality is that
+        of a Samurai I rather commit seppeku than fail".
+      </p>
+    </div>
+  </div>
+</div>
 
-  {% include "footer.html" %}
+<hr />
+
+{% include "footer.html" %}
